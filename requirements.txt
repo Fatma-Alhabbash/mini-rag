@@ -1,3 +1,3 @@
-fastapi==0.110.2
-uvicorn[standard]==0.29.0
+fastapi==0.110.2            # Converts the normal code to thing that can be accessed through API
+uvicorn[standard]==0.29.0   # Responsible to run fastapi as a web server
 python-multipart==0.0.9
