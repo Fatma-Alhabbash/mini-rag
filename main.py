@@ -1,9 +1,9 @@
 from fastapi import FastAPI
+from dotenv import load_dotenv
+load_dotenv(".env")
+
+from routes import base
 
 app = FastAPI()
 
-@app.get("/welcome") # It means that when someone enter /welcome in the URL it will execute the function next to it
-def welcome():
-    return {
-        "message": "Hello World!"
-    }
+app.include_router(base.base_router) # This tells the app to use the base_router
